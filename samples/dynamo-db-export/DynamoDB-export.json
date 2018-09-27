@@ -40,9 +40,9 @@
             "masterInstanceType": "m1.medium",
             "coreInstanceType": "#{myInstanceType}",
             "coreInstanceCount": "#{myInstanceCount}",
-	          "region" : "#{myRegion}",
-	          "terminateAfter" : "12 hours",
-            "keyPair" : "ramsug-test-desktop"
+	        "region" : "#{myRegion}",
+            "terminateAfter" : "12 hours",
+            "keyPair" : "#{myKeyPair}"
         }
     ],
     "parameters": [
@@ -71,15 +71,21 @@
         },
         {
             "description": "Instance Count",
-	    "watermark" : " (IOPS / 300) for m1.medium.(IOPS / 1500) for m3.xlarge",
+	        "watermark" : " (IOPS / 300) for m1.medium.(IOPS / 1500) for m3.xlarge",
             "id": "myInstanceCount",
             "type": "Integer"
         },
-	{
-	    "description" : "Region",
-	    "watermark"   : "Region of DynamoDB Table/EMR cluster",
+        {
+            "description" : "Region",
+            "watermark"   : "Region of DynamoDB Table/EMR cluster",
             "id"          : "myRegion",
             "type"     :    "String"
-	}
+        },
+        {
+            "description" : "KeyPair",
+            "watermark"   : "KeyPair for EC2 instances",
+            "id"          : "myKeyPair",
+            "type"     :    "String"
+        }
     ]
 }

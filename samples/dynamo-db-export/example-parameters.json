@@ -6,6 +6,7 @@
         "myDDBTableName"           :   "dynamo-table-name",
         "myInstanceType"           :   "m1.medium",
         "myInstanceCount"          :   "1",
-        "myRegion"                 :   "eu-west-1"
+        "myRegion"                 :   "eu-west-1",
+        "myKeyPair"                :   "key-for-ddb-backup"
     }
 }
